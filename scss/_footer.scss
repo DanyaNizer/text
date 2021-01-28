@@ -1,0 +1,33 @@
+/* footer CSS
+ * --------------------------------------- */
+$rem: 16;
+.footer {
+   width: 100%;
+   position: fixed;
+   z-index: 999;
+   margin-top: 25px;
+   display: flex;
+   justify-content: flex-end;
+   top: 90vh;
+   left: 0;
+   &__soc {
+      display: flex;
+      margin-right: 65px;
+   }
+
+   &__a {
+      color: #fff;
+      font-family: Noto Sans Rejang;
+      font-size: 18rem / $rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 25px;
+      padding: 0 15px;
+      &:first-child {
+         border-right: solid 2px #fff;
+      }
+      &:last-child {
+         border-left: solid 2px #fff;
+      }
+   }
+}

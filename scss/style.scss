@@ -1,0 +1,1083 @@
+// Файл компиляции SCSS style.css
+@import "_header.scss";
+@import "_footer.scss";
+
+/* Custom CSS
+ * --------------------------------------- */
+.wrapper {
+   margin: 0 auto;
+   max-width: 1440px;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+}
+.page {
+   position: relative;
+   overflow: hidden;
+   background: url(../img/bg.png) no-repeat center;
+   background-size: cover;
+   height: 100vh;
+}
+// .page2 {
+//    position: relative;
+//    overflow: hidden;
+// }
+// .page2:before {
+//    content: "";
+//    position: absolute;
+//    width: 100vw;
+//    height: 100vh;
+//    top: 0%;
+//    left: 0%;
+//    z-index: -1;
+//    background: url(../img/bg.png) no-repeat 0 0;
+//    background-size: cover;
+//    -webkit-transform: rotate(180deg);
+//    -moz-transform: rotate(180deg);
+//    -ms-transform: rotate(180deg);
+//    -o-transform: rotate(180deg);
+//    transform: rotate(180deg);
+// }
+@font-face {
+   font-family: Noto Sans Rejang; /* Имя шрифта */
+   src: url(../fonts/Noto_Sans/NotoSans-Regular.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+   font-family: Oswald; /* Имя шрифта */
+   src: url(../fonts/Oswald/Oswald-VariableFont_wght.ttf); /* Путь к файлу со шрифтом */
+}
+@font-face {
+   font-family: Rubik; /* Имя шрифта */
+   src: url(../fonts/Rubik/Rubik-VariableFont_wght.ttf); /* Путь к файлу со шрифтом */
+}
+$rem: 16;
+// Главнаяя страница
+
+.first-page {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   justify-content: space-between;
+   align-items: center;
+   &__slider {
+   }
+   &__content {
+      width: 40%;
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: flex-start;
+   }
+   &__heading {
+      color: #fff;
+      font-family: Oswald;
+      font-size: 50rem / $rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 74px;
+      letter-spacing: 0em;
+      text-align: left;
+      margin-left: 13px;
+      margin-bottom: 30px;
+      margin-top: 50px;
+   }
+
+   &__heading-text {
+      width: 495px;
+
+      color: #fff;
+      position: relative;
+      font-family: Noto Sans;
+      font-size: 18rem / $rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 22px;
+      letter-spacing: 0em;
+      text-align: justify;
+      margin-left: 13px;
+      margin-bottom: 30px;
+   }
+   &__a {
+      color: #fff;
+      font-family: Oswald;
+      font-size: 20rem / $rem;
+      font-style: normal;
+      font-weight: 500;
+      text-align: left;
+      margin-left: 13px;
+      margin-bottom: 20px;
+      background: url("../img/Vector.png") no-repeat;
+      background-position: 100% 50%;
+      padding-right: 35px;
+      padding-bottom: 5px;
+      &:hover {
+         border-bottom: solid 2px #fff;
+         padding-bottom: 3px;
+         background-position: 100% 55%;
+      }
+   }
+}
+.card {
+   width: 100%;
+   display: flex;
+   overflow-x: auto;
+   position: relative;
+
+   &__content {
+      overflow: hidden;
+      margin: 0 10px;
+      margin-bottom: 10px;
+      height: 323px;
+      min-width: 223px;
+   }
+}
+.card-blok {
+   background: rgba(39, 39, 39, 0.8);
+
+   &__text {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      width: calc(100% - 20px);
+      height: calc(100% - 50px);
+      padding: 20px 0px 30px 20px;
+   }
+   &__data {
+      width: 100%;
+      text-align: left;
+      color: #fff;
+   }
+   &__name {
+      color: #ffffff;
+      font-family: Oswald;
+      font-family: Rubik;
+
+      font-family: Rubik;
+      font-size: 20rem / $rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 15px;
+      letter-spacing: 0em;
+      text-align: left;
+   }
+   &__result {
+      margin-top: 15px;
+      color: #54ffcc;
+      font-family: Rubik;
+      font-size: 15rem / $rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 12px;
+      letter-spacing: 0em;
+      text-align: left;
+   }
+   &__a-img {
+      width: 160px;
+      text-align: left;
+      font-family: Oswald;
+      font-size: 18px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 27px;
+      color: #fff;
+      background: url("../img/Vector.png") no-repeat;
+      padding-bottom: 5px;
+      background-position: 100% 50%;
+      &:hover {
+         border-bottom: solid 2px #fff;
+         padding-bottom: 3px;
+         background-position: 100% 55%;
+      }
+   }
+}
+
+.dropdown {
+   margin-right: 300px;
+   display: inline-block;
+   position: relative;
+   bottom: 60px;
+   left: 15px;
+   &:hover .dropdown__content {
+      display: block;
+   }
+
+   &__dropbtn {
+      padding: 5px;
+      cursor: pointer;
+      background: url("http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png") no-repeat
+         left center;
+      padding-left: 25px;
+      width: 40px;
+   }
+
+   &__defolt-leng {
+      color: #fff;
+   }
+
+   &__content {
+      display: none;
+      position: absolute;
+      width: 140px;
+
+      & a:first-child {
+         background: url("http://icons.iconarchive.com/icons/custom-icon-design/flag-3/16/Russia-Flag-icon.png")
+            no-repeat left center;
+         background-size: 16px;
+      }
+
+      & a {
+         color: #fff;
+         padding: 2px 0 2px 25px;
+         text-decoration: none;
+         display: block;
+         background: url("../img/the-united-states-flag-icon-free-download.jpg") no-repeat left center;
+         background-size: 18rem / $rem;
+         font-family: Noto Sans Rejang;
+      }
+
+      & a:last-child {
+         background: url("../img/flag-400.png") no-repeat left center;
+         background-size: 16px;
+      }
+
+      & a:hover {
+         color: #ddd;
+      }
+   }
+}
+/* Стили блока почему мы лучиие 2 */
+.two-page {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+
+   &__title {
+      text-align: right;
+      font-family: Oswald;
+      font-size: 60rem / $rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 89px;
+      text-align: right;
+      margin-right: 100px;
+      & p {
+         font-size: 60rem / $rem;
+         line-height: 89px;
+      }
+      & span {
+         font-size: 60rem / $rem;
+         color: #fff;
+         font-style: normal;
+         font-weight: 600;
+         line-height: 89px;
+         letter-spacing: 0em;
+         text-align: justified;
+         padding-bottom: 5px;
+      }
+   }
+   &__wrapper {
+      height: 100vh;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+   }
+
+   &__title-text {
+      display: flex;
+      flex-direction: column;
+      font-family: Oswald;
+      font-size: 36px;
+      font-style: normal;
+      font-weight: 600;
+      line-height: 39px;
+      letter-spacing: 0em;
+      text-align: justified;
+   }
+
+   &__gray-title {
+      color: #565656;
+      padding-bottom: 5px;
+   }
+
+   &__wrap {
+      width: 77%;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+   }
+
+   &__blocks {
+      display: flex;
+      flex-wrap: wrap;
+   }
+
+   &__block {
+      position: relative;
+      font-family: "Rubik";
+      width: 270px;
+      height: 345px;
+      margin-right: 12px;
+      margin-bottom: 12px;
+      background: #58a;
+      color: #fff;
+      background: linear-gradient(225deg, transparent 58px, rgba(27, 27, 27, 0.3) 0);
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+   }
+}
+.two-block {
+   &__title {
+      margin-top: 16px;
+      margin-left: 19px;
+      width: 139px;
+      font-family: Rubik;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+      text-align: left;
+   }
+
+   &__line {
+      border: 1px solid #fff;
+      transform: matrix(-0.71, -0.71, -0.71, 0.71, 0, 0);
+      width: 110px;
+      position: relative;
+      left: 167px;
+      top: 50px;
+   }
+
+   &__text {
+      margin-left: 19px;
+      margin-bottom: 50px;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 17px;
+      letter-spacing: 0em;
+      text-align: left;
+   }
+
+   &__num {
+      width: 95%;
+      text-align: right;
+      margin-bottom: 20px;
+      font-family: Rubik;
+      font-size: 20rem / $rem;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+   }
+}
+/* Стили блока технологии анализа 3 */
+.three-page {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+
+   &__slider {
+      // *Слайдер
+      width: 50.69%;
+      height: 100%;
+   }
+
+   &__text-blok {
+      width: 49.31%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      & div {
+         width: 506px;
+      }
+      & h2 {
+         font-family: Oswald;
+         font-size: 50rem / $rem;
+         font-style: normal;
+         font-weight: 500;
+
+         background-color: #fff;
+         margin-bottom: 30px;
+         padding: 0 10px 10px 10px;
+         height: 63px;
+         width: 375px;
+      }
+      & h3 {
+         font-family: Rubik;
+         font-size: 30rem / $rem;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 30px;
+         text-align: left;
+         width: 486px;
+         background-color: #fff;
+         margin-bottom: 40px;
+         padding: 10px;
+      }
+      & p {
+         font-family: Rubik;
+         font-size: 18rem / $rem;
+         font-style: normal;
+         font-weight: 400;
+         line-height: 21px;
+         letter-spacing: 0em;
+         text-align: left;
+         color: #fff;
+         width: 490px;
+         padding-right: 16px;
+      }
+   }
+}
+
+/* Стили блока тарифы */
+
+.tariffs__text {
+   display: flex;
+   justify-content: space-between;
+   width: 950px;
+   margin: 0 auto;
+}
+.tariffs__title__text {
+   display: flex;
+   align-items: center;
+   font-family: Oswald;
+   font-size: 36px;
+   height: 35px;
+   background: #fff;
+   width: 120px;
+   text-align: center;
+   line-height: 53, 35px;
+   font-weight: 700;
+   padding-left: 5px;
+   margin-bottom: 20px;
+}
+
+.tariffs__title__pod__text {
+   font-family: Rubik;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 17px;
+   letter-spacing: 0em;
+   text-align: left;
+}
+.tariffs__title__pod__text p {
+   background: #fff;
+   width: 250px;
+   height: 49px;
+   margin-bottom: 34%;
+}
+.tariffs {
+   display: flex;
+   font-family: Rubik;
+}
+.standart__title,
+.advanced__title,
+.vip__title {
+   font-size: 16px;
+   color: #fff;
+   padding-top: 6%;
+   padding-bottom: 4%;
+}
+.tariffs__item {
+   font-family: Rubik;
+   font-size: 14px;
+   font-style: normal;
+   font-weight: 300;
+   line-height: 17px;
+   letter-spacing: 0em;
+   text-align: center;
+   color: #fff;
+   width: 220px;
+   height: 190px;
+   margin-left: 15px;
+   margin-right: 15px;
+   border-bottom: 2px solid white;
+   border-bottom-width: 50%;
+}
+.position {
+   padding-top: 25px;
+}
+.one__collum {
+   font-family: Rubik;
+   color: #fff;
+}
+.two__collum,
+.three__collum,
+.four__collum {
+   width: 220px;
+   text-align: center;
+   color: #fff;
+}
+
+#modal {
+   width: 730px;
+   height: 710px;
+   display: none;
+   left: 150px;
+   bottom: 75px;
+}
+.modal__btn {
+   margin-top: 30px;
+   width: 220px;
+   text-align: center;
+}
+.modal__btn a {
+   color: #fff;
+}
+.modal__btn:after {
+   content: url(../img/Vector.png);
+   padding-left: 10px;
+}
+.modal__text {
+   font-family: Rubik;
+   margin-top: 100px;
+   font-size: 1.5rem;
+   text-align: center;
+}
+.modal__social {
+   padding-top: 80px;
+}
+.fourth-page {
+   display: flex;
+   align-items: center;
+}
+
+/* Стили блока гарантии */
+
+.fifth-page {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   &__slider {
+      width: 40.83%;
+      height: 100%;
+   }
+   &__right-blok {
+      width: calc(59.17% - 140px);
+      height: 100%;
+      padding: 0 100px 0 40px;
+   }
+
+   &__text-blok {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      & h2 {
+         font-family: Oswald;
+         font-style: normal;
+         font-weight: bold;
+         font-size: 40px;
+         line-height: 59px;
+         text-align: justify;
+         padding: 0 5px;
+         background-color: #fff;
+         color: #000000;
+         margin-bottom: 12px;
+         margin-top: 90px;
+         width: 155px;
+         height: 55px;
+      }
+      & h3 {
+         font-family: Rubik;
+         font-style: normal;
+         font-weight: normal;
+         font-size: 20px;
+         line-height: 24px;
+         padding: 5px;
+         background-color: #fff;
+         color: #000000;
+         margin-bottom: 25px;
+         width: 595px;
+      }
+      & p {
+         font-family: Rubik;
+         font-style: normal;
+         font-weight: 300;
+         font-size: 16px;
+         line-height: 19px;
+         text-align: justify;
+         color: #ffffff;
+         margin-bottom: 60px;
+      }
+   }
+
+   &__card-bloks {
+      width: 100%;
+      display: flex;
+      margin-bottom: 56px;
+   }
+
+   &__card-blok {
+      width: 223px;
+      height: 323px;
+      background: rgba(46, 46, 46, 0.2);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      margin: 0 10px;
+   }
+
+   &__card-heading {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #ffffff;
+      margin: 23px 0;
+   }
+
+   &__line {
+      width: 120px;
+      height: 0px;
+      margin-bottom: 40px;
+      border: 1px solid #ffffff;
+   }
+
+   &__stats {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      display: flex;
+      align-items: center;
+      text-align: center;
+      color: #ffffff;
+      margin-bottom: 20px;
+   }
+   & a {
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 20px;
+      line-height: 30px;
+      color: #ffffff;
+      background: url("../img/Vector.png") no-repeat;
+      background-position: 100% 60%;
+      padding-right: 30px;
+   }
+}
+
+/* Стили блока как ми работаем */
+.sixth-page {
+   width: 100vw;
+   height: 100vh;
+   display: flex;
+   align-items: center;
+   &__text {
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: 600;
+      font-size: 60px;
+      line-height: 107.7%;
+      width: 25.97%;
+      & h2 {
+         color: #fff;
+         margin-left: 99px;
+      }
+      & span {
+         color: #565656;
+      }
+   }
+
+   &__right {
+      width: 74.03%;
+   }
+
+   &__cards {
+      display: flex;
+      width: 100%;
+   }
+
+   &__card {
+      width: 224px;
+      height: 240px;
+      background: rgba(46, 46, 46, 0.2);
+      margin: 0 10px;
+   }
+
+   &__num {
+      text-align: right;
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 24px;
+      color: #f2f2f2;
+      width: calc(100%-5px);
+      margin: 5px 5px 0 0;
+   }
+
+   &__line {
+      position: relative;
+      left: 71%;
+      top: 5px;
+      width: 70px;
+      height: 0px;
+      border: 1px solid #ffffff;
+      transform: matrix(-0.71, -0.71, -0.71, 0.71, 0, 0);
+   }
+
+   &__card-text {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 14px;
+      line-height: 17px;
+      text-align: center;
+      color: #ffffff;
+      width: 100%;
+      margin-top: 101px;
+   }
+}
+@media screen and(max-width: 1920px) {
+   html {
+      font-size: 20px;
+   }
+   .two-page__wrap {
+      width: 58%;
+      margin-left: 16%;
+   }
+   .first-page.page {
+      & #main__slider.slick-slider {
+         width: 1000px;
+         height: 100vh;
+      }
+      & .slick-dots {
+         left: -80px;
+      }
+   }
+   /* header */
+   #top__nav #nonbtn__slider.slick-slider {
+      width: 1000px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 664px;
+   }
+   #top__nav__menu li {
+      margin: 50px 0;
+   }
+}
+
+@media screen and(max-width: 1600px) {
+   .two-page__wrap {
+      width: 69%;
+   }
+   html {
+      font-size: 16px;
+   }
+}
+@media screen and(max-height: 1025px) {
+   .two-page__wrap {
+      width: 75%;
+   }
+   .fifth-page__right-blok {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+   }
+   .fifth-page.page .fifth-page__slider {
+      width: 42.83%;
+   }
+   .first-page.page {
+      & #main__slider.slick-slider {
+         width: 650px;
+         height: 100vh;
+      }
+   }
+}
+@media screen and(max-width: 1367px) {
+   #top__nav #nonbtn__slider.slick-slider {
+      width: 720px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 425px;
+   }
+   #top__nav__menu li {
+      margin: 20px 0;
+   }
+   #top__nav__menu {
+      width: 32%;
+   }
+   .two-page__wrap {
+      width: 1090px;
+   }
+}
+@media screen and (max-width: 1441px) {
+   #top__nav #nonbtn__slider.slick-slider {
+      width: 730px;
+   }
+   .fourth-page {
+      width: 100vw;
+      height: 100vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+   }
+   .tariffs__text {
+      margin: 0;
+      width: 90%;
+   }
+   .tariffs__title__text {
+      font-family: Oswald;
+      font-size: 40rem / $rem;
+      font-style: normal;
+      font-weight: 700;
+      line-height: 59px;
+      text-align: justify;
+   }
+   .tariffs__title__pod__text {
+      font-family: Rubik;
+      font-size: 16rem / $rem;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 19px;
+      text-align: left;
+   }
+   .position {
+      font-family: Rubik;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: 24px;
+      letter-spacing: 0em;
+   }
+   .standart__title,
+   .advanced__title,
+   .vip__title {
+      font-family: Rubik;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 300;
+      line-height: 19px;
+      letter-spacing: 0em;
+      text-align: center;
+   }
+   .tariffs__content {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+   }
+   .modal__btn a {
+      font-family: Oswald;
+      font-style: normal;
+      font-weight: 500;
+      font-size: 18px;
+      line-height: 27px;
+      color: #ffffff;
+   }
+   .vip__title,
+   .advanced__title,
+   .standart__title {
+      font-family: Rubik;
+      font-style: normal;
+      font-weight: normal;
+      font-size: 20px;
+      line-height: 24px;
+
+      color: #ffffff;
+   }
+   .tariffs__title__text {
+      height: 45px;
+      width: 140px;
+   }
+   .tariffs__title__pod__text p {
+      width: 288px;
+      height: 61px;
+   }
+   .tariffs__item {
+      margin: 0 20px;
+   }
+   .tariffs {
+      margin-right: 120px;
+      margin-top: 24px;
+   }
+}
+@media screen and (max-width: 769px) {
+   #modal {
+      width: 730px;
+      height: 710px;
+      display: none;
+      left: 130px;
+      bottom: 75px;
+   }
+}
+@media screen and (max-width: 426px) {
+   #modal {
+      width: 730px;
+      height: 710px;
+      display: none;
+      left: 130px;
+      bottom: 575px;
+   }
+}
+@media screen and (max-width: 321px) {
+   #modal {
+      width: 730px;
+      height: 710px;
+      display: none;
+      left: 130px;
+      bottom: 775px;
+   }
+}
+@media screen and(max-width: 1280px) {
+   #top__nav #nonbtn__slider.slick-slider {
+      bottom: 424px;
+   }
+   .fifth-page {
+      &.page #three-page.slick-slider {
+         width: 530px;
+      }
+      &__text-blok h3 {
+         width: 522px;
+      }
+      &__text-blok h2 {
+         margin-top: 30px;
+      }
+      &__text-blok p {
+         margin-bottom: 5px;
+      }
+      &__right-blok {
+         padding: 0 10px 0 40px;
+         width: calc(57.17% - 50px);
+      }
+      &__line {
+         margin-bottom: 10px;
+      }
+      &__card-blok {
+         height: 280px;
+      }
+      &__card-heading {
+         margin: 15px 0;
+      }
+   }
+   .sixth-page__text h2 {
+      margin-left: 40px;
+   }
+   .two-page__wrap {
+      width: 77%;
+      margin-left: 0;
+   }
+}
+@media screen and(max-width: 1025px) {
+   html {
+      font-size: 15px;
+   }
+   /* header */
+   #top__nav #nonbtn__slider.slick-slider {
+      width: 550px;
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      bottom: 462px;
+   }
+   /* Главный слайдер */
+   .first-page.page {
+      & #main__slider.slick-slider {
+         width: 550px;
+         height: 100vh;
+      }
+      & .slick-dots {
+         left: -80px;
+      }
+   }
+   /* Гаваная станица */
+   .first-page__heading {
+      margin-top: 5px;
+      margin-bottom: 5px;
+   }
+   .dropdown {
+      bottom: 35px;
+   }
+   .first-page__heading-text {
+      width: 381px;
+      margin-bottom: 5px;
+   }
+
+   /* 2 страница */
+   .two-page {
+      &__title {
+         margin-right: 30px;
+      }
+      &__blocks {
+         width: 250px;
+      }
+   }
+   .two-block__line {
+      left: 135px;
+   }
+   .three-page__slider {
+      width: 46%;
+      margin-right: 3%;
+   }
+   .tariffs {
+      &__text {
+         width: 97%;
+      }
+      &__item {
+         margin: 0 10px;
+      }
+   }
+
+   /* Гаранитии */
+   .fifth-page {
+      &.page #three-page.slick-slider {
+         width: 420px;
+      }
+      &__text-blok h3 {
+         width: 522px;
+      }
+      &__text-blok h2 {
+         margin-top: 30px;
+      }
+      &__text-blok p {
+         margin-bottom: 5px;
+      }
+      &__right-blok {
+         padding: 0 10px 0 40px;
+         width: calc(57.17% - 50px);
+      }
+      &__line {
+         margin-bottom: 10px;
+      }
+      &__card-blok {
+         height: 280px;
+      }
+      &__card-heading {
+         margin: 15px 0;
+      }
+   }
+   /* Как мы работаем */
+   .sixth-page {
+      &__text h2 {
+         margin-left: 20px;
+      }
+      & #big__slider.slick-slider {
+         width: 735px;
+      }
+      &__card {
+         width: 175px;
+         margin: 0px 5px;
+      }
+      &__line {
+         left: 62%;
+      }
+      &__card-text {
+         margin-top: 70px;
+      }
+   }
+}

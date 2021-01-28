@@ -1,0 +1,163 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+a{
+	text-decoration: none;
+}
+body{
+	background: gray;
+}
+@font-face {
+	font-family: Rubik;
+	src: url(fonts/Rubik/Rubik-Italic-VariableFont_wght.ttf);
+}
+@font-face {
+	font-family: Oswald;
+	src: url(fonts/Oswald/Oswald-VariableFont_wght.ttf);
+}
+
+.wrapper{
+	margin: 0 auto;
+	max-width: 1440px;
+	display: flex;
+	height: 900px;
+	align-items: center;
+}
+.tariffs__text{
+	display: flex;
+	justify-content: space-between;
+	width: 950px;
+	margin: 0 auto;
+}
+.tariffs__title__text{
+	display: flex;
+	align-items: center;
+	font-family: Oswald;
+	font-size: 36px;
+	height: 35px;
+	background: #fff;
+	width: 120px;
+	text-align: center;
+	line-height: 53,35px;
+	font-weight: 700;
+	padding-left: 5px;
+	margin-bottom: 20px;
+}
+
+.tariffs__title__pod__text{
+	font-family: Rubik;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 17px;
+	letter-spacing: 0em;
+	text-align: left;
+
+}
+.tariffs__title__pod__text p{
+	background: #fff;
+	width: 250px;
+	height: 49px;
+	margin-bottom: 34%;
+}
+.tariffs{
+	display: flex;
+	font-family: Rubik;
+}
+.standart__title,
+.advanced__title,
+.vip__title{
+	font-size: 16px;
+	color: #fff;
+	padding-top: 6%;
+	padding-bottom: 4%;
+}
+.tariffs__item{
+	font-family: Rubik;
+	font-size: 14px;
+	font-style: normal;
+	font-weight: 300;
+	line-height: 17px;
+	letter-spacing: 0em;
+	text-align: center;
+	color: #fff;
+	width: 	220px;
+	height: 190px;
+	margin-left: 15px;
+	margin-right: 15px;
+	border-bottom: 2px solid white;
+	border-bottom-width: 50%;
+}
+.position{
+	padding-top: 25px;
+}
+.one__collum{
+	font-family: Rubik;
+	color: #fff;
+}
+.two__collum,
+.three__collum,
+.four__collum{
+	width: 220px;
+	text-align: center;
+	color: #fff; 
+}
+
+#modal{
+	width: 730px;
+	height: 710px;
+	display: none;
+	left: 150px;
+	bottom: 75px;
+}
+.modal__btn{
+	margin-top: 30px;
+	width: 220px;
+	text-align: center;
+}
+.modal__btn a{
+	color: #fff;
+}
+.modal__btn:after{
+	content: url(img/arrow.png);
+	padding-left: 10px;
+}
+.modal__text{
+	font-family: Rubik;
+	margin-top: 100px;
+	font-size: 1.5rem;
+	text-align: center;
+}
+.modal__social{
+	padding-top: 80px;
+}
+
+
+@media screen and (max-width: 769px) {
+	#modal{
+	width: 730px;
+	height: 710px;
+	display: none;
+	left: 130px;
+	bottom: 75px;
+	}
+}
+@media screen and (max-width: 426px) {
+	#modal{
+	width: 730px;
+	height: 710px;
+	display: none;
+	left: 130px;
+	bottom: 575px;
+	}
+}
+@media screen and (max-width: 321px) {
+	#modal{
+	width: 730px;
+	height: 710px;
+	display: none;
+	left: 130px;
+	bottom: 775px;
+	}
+}
